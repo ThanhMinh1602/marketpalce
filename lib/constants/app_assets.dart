@@ -5,5 +5,7 @@ class AppAssets {
       'assets/images/splash_basehall_background1.png';
   static const String splash_basehall_background2 =
       'assets/images/splash_basehall_background2.png';
+  static const String splash_basehall_background3 =
+      'assets/images/splash_basehall_background3.png';
   static const String language_icon = 'assets/icons/language_icon.png';
 }

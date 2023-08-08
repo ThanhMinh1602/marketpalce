@@ -6,8 +6,8 @@ class AppColors {
   static const Color orangePrimary = Color(0xFFFBAC36);
   static const Color purplePrimary = Color(0xFFA88AEC);
   static const Color greenPrimary = Color(0xFF86CC7A);
-  static const Color darkGray = Color(0xFF333333);
-  static const Color mediumGray = Color(0xFF666666);
+  static const Color T_title_black = Color(0xFF333333);
+  static const Color T_text_Gray_1 = Color(0xFF666666);
   static const Color lightGray = Color(0xFF999999);
   static const Color lightBackground = Color(0xFFEAEAEA);
   static const Color extraLightBackground = Color.fromRGBO(235, 239, 242, 0.5);

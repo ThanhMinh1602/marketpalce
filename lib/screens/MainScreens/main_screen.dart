@@ -3,8 +3,6 @@ import 'package:marketpalce/constants/app_assets.dart';
 import 'package:marketpalce/constants/app_color.dart';
 import 'package:marketpalce/helpers/image_helper.dart';
 import 'package:marketpalce/screens/HomeScreens/home_main_screen.dart';
-import 'package:marketpalce/screens/HomeScreens/home_take_away_screen.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});

@@ -108,6 +108,7 @@ class _SplashScreenState extends State<SplashScreen> {
                               dotHeight: 8, dotWidth: 8),
                         ),
                         CustomButtonWidget(
+                          borderColor: AppColors.primaryColor,
                           backgroundColor: AppColors.primaryColor,
                           foregroundColor: AppColors.white,
                           label: 'Next',
@@ -124,6 +125,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       height: 50,
                       width: 50,
                       child: CustomButtonWidget(
+                        borderColor: AppColors.primaryColor,
                         backgroundColor: AppColors.primaryColor,
                         foregroundColor: AppColors.white,
                         label: 'Time to start ordering',

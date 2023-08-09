@@ -12,15 +12,6 @@ class HomeTakeAwayScreen extends StatefulWidget {
 }
 
 class _HomeTakeAwayScreenState extends State<HomeTakeAwayScreen> {
-  String selectedLocation = 'Unnamed Road';
-
-  List<String> dropdownItems = [
-    'Unnamed Road',
-    '1 Pat Tat St, San Po Kong',
-    '2 Another St, Another City',
-    '3 Third Location'
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold();

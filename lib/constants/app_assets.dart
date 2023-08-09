@@ -9,6 +9,7 @@ class AppAssets {
   static const String splash_basehall_background3 =
       'assets/images/splash_basehall_background3.png';
   static const String appBar_bgr = 'assets/images/appbar_bgr.png';
+  static const String image_defaut = 'assets/images/image_defaut.jpg';
   //icons
   static const String language_icon = 'assets/icons/language_icon.png';
   static const String qr_icon = 'assets/icons/icon_qr.png';
@@ -21,4 +22,10 @@ class AppAssets {
   static const String person_icon = 'assets/icons/person_icon.png';
   static const String person_active_icon =
       'assets/icons/person_active_icon.png';
+  static const String star_icon = 'assets/icons/icon_star.png';
+  static const String bicycle_icon = 'assets/icons/icon_bicycle.png';
+  static const String book_icon = 'assets/icons/icon_book.png';
+  static const String cart_icon = 'assets/icons/icon_cart.png';
+  static const String truck_icon = 'assets/icons/icon_truck.png';
+  static const String voucher_icon = 'assets/icons/icon_voucher.png';
 }

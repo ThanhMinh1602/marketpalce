@@ -13,4 +13,9 @@ class AppColors {
   static const Color extraLightBackground = Color.fromRGBO(235, 239, 242, 0.5);
   static const Color babyBlueEyes = Color(0XFFF2F3F8);
   static const Color white = Color(0xFFFFFFFF);
+
+  // Opacity function
+  static Color withOpacity(Color color, double opacity) {
+    return color.withOpacity(opacity);
+  }
 }

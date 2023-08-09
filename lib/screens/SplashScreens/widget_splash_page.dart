@@ -52,7 +52,7 @@ class SplashPage extends StatelessWidget {
                 fontSize: 20,
                 color: colorDescription),
           ),
-        )
+        ),
       ],
     );
   }

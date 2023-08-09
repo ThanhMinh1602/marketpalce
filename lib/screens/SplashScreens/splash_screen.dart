@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:marketpalce/constants/app_assets.dart';
 import 'package:marketpalce/constants/app_color.dart';
 import 'package:marketpalce/helpers/image_helper.dart';
-import 'package:marketpalce/screens/HomeScreens/home_main.dart';
+import 'package:marketpalce/screens/MainScreens/main_screen.dart';
 import 'package:marketpalce/screens/SplashScreens/widget_splash_page.dart';
 import 'package:marketpalce/widgets/custom_button.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -136,7 +136,7 @@ class _SplashScreenState extends State<SplashScreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const HomeMain()));
+                                    builder: (context) => const MainScreen()));
                           }
                         },
                       ),

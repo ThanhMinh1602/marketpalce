@@ -1,11 +1,10 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:marketpalce/constants/app_assets.dart';
 
 import 'package:marketpalce/constants/app_color.dart';
 import 'package:marketpalce/constants/app_style.dart';
-
-import '../constants/app_assets.dart';
-import '../helpers/image_helper.dart';
+import 'package:marketpalce/helpers/image_helper.dart';
 
 class CustomLabel extends StatelessWidget {
   const CustomLabel({

@@ -5,6 +5,7 @@ import 'package:marketpalce/constants/app_assets.dart';
 import 'package:marketpalce/constants/app_color.dart';
 import 'package:marketpalce/constants/app_style.dart';
 import 'package:marketpalce/helpers/image_helper.dart';
+import 'package:marketpalce/screens/HomeScreens/WidgetHome/detail_widget.dart';
 
 class CustomCard extends StatelessWidget {
   const CustomCard({
@@ -56,55 +57,9 @@ class CustomCard extends StatelessWidget {
                       'Toronto Restaurant',
                       style: AppStyle.lightText_16_700,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 8),
-                      child: Row(
-                        children: [
-                          ImageHelper.loadFromAsset(AppAssets.star_icon),
-                          const SizedBox(
-                            width: 4,
-                          ),
-                          const Text(
-                            '5.0',
-                            style: AppStyle.lightText_13_500,
-                          ),
-                          const SizedBox(
-                            width: 4,
-                          ),
-                          const Text(
-                            '(99+)',
-                            style: AppStyle.lightText_13_400,
-                          ),
-                          const SizedBox(
-                            width: 4,
-                          ),
-                          const Text(
-                            '|',
-                            style: AppStyle.lightText_13_400,
-                          ),
-                          const SizedBox(
-                            width: 4,
-                          ),
-                          const Text(
-                            'Western',
-                            style: AppStyle.lightText_13_400,
-                          ),
-                          const SizedBox(
-                            width: 4,
-                          ),
-                          const Text(
-                            '|',
-                            style: AppStyle.lightText_13_400,
-                          ),
-                          const SizedBox(
-                            width: 4,
-                          ),
-                          const Text(
-                            '50m',
-                            style: AppStyle.lightText_13_400,
-                          )
-                        ],
-                      ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 8),
+                      child: DetailWidget(),
                     ),
                     const SizedBox(
                       height: 10,

@@ -3,6 +3,8 @@ import 'package:marketpalce/constants/app_assets.dart';
 import 'package:marketpalce/constants/app_color.dart';
 import 'package:marketpalce/constants/app_style.dart';
 import 'package:marketpalce/helpers/image_helper.dart';
+import 'package:marketpalce/screens/HomeScreens/book_screen.dart';
+import 'package:marketpalce/screens/HomeScreens/browse_screen.dart';
 import 'package:marketpalce/screens/HomeScreens/delivery_screen.dart';
 import 'package:marketpalce/screens/HomeScreens/take_away_screen.dart';
 
@@ -140,19 +142,71 @@ class _HomeMainScreenState extends State<HomeMainScreen> {
             ),
           ),
           Expanded(
-            child: IndexedStack(
-              index: _current,
+            child: Stack(
+              alignment: Alignment.bottomCenter,
               children: [
-                const TakeAwayScreen(),
-                const DeliceryScreen(),
-                Container(
-                  color: const Color.fromARGB(255, 4, 255, 0),
-                  child: const Center(child: Text("Container 3")),
+                IndexedStack(
+                  index: _current,
+                  children: const [
+                    TakeAwayScreen(),
+                    DeliceryScreen(),
+                    BookScreen(),
+                    BrowseScreen()
+                  ],
                 ),
-                Container(
-                  color: AppColors.primaryColor,
-                  child: const Center(child: Text("Container 4")),
-                ),
+                Positioned(
+                  bottom: 6,
+                  child: Container(
+                    width: 120,
+                    height: 40,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: AppColors.white),
+                    child: Stack(alignment: Alignment.center, children: [
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 16),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Map',
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.w600),
+                            ),
+                            Text(
+                              '|',
+                              style: TextStyle(
+                                  color: AppColors.lightGray, fontSize: 17),
+                            ),
+                            Text('Filter',
+                                style: TextStyle(
+                                    fontSize: 12, fontWeight: FontWeight.w600)),
+                          ],
+                        ),
+                      ),
+                      Positioned(
+                        top: 8,
+                        right: 9,
+                        child: Container(
+                          width: 12,
+                          height: 12,
+                          decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: AppColors.primaryColor),
+                          child: const Center(
+                            child: Text(
+                              '3',
+                              style: TextStyle(
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w500,
+                                  color: AppColors.white),
+                            ),
+                          ),
+                        ),
+                      )
+                    ]),
+                  ),
+                )
               ],
             ),
           ),

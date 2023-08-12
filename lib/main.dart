@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:marketpalce/screens/HomeScreens/home_main_screen.dart';
+import 'package:marketpalce/screens/SearchScreens/main_search_screen.dart';
 import 'package:marketpalce/screens/SplashScreens/splash_screen.dart';
 
 void main() {
@@ -12,10 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: const SplashScreen(),
       theme: ThemeData(
-        appBarTheme: AppBarTheme(
-          backgroundColor: Colors.blue, // Màu nền của AppBar
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.blue,
         ),
       ),
     );

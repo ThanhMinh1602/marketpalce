@@ -7,6 +7,8 @@ import 'package:marketpalce/screens/HomeScreens/book_screen.dart';
 import 'package:marketpalce/screens/HomeScreens/browse_screen.dart';
 import 'package:marketpalce/screens/HomeScreens/delivery_screen.dart';
 import 'package:marketpalce/screens/HomeScreens/take_away_screen.dart';
+import 'package:marketpalce/screens/SearchScreens/filters_screen.dart';
+import 'package:marketpalce/screens/SearchScreens/main_search_screen.dart';
 
 class HomeMainScreen extends StatefulWidget {
   const HomeMainScreen({Key? key}) : super(key: key);
@@ -88,7 +90,16 @@ class _HomeMainScreenState extends State<HomeMainScreen> {
                         const SizedBox(
                           width: 10,
                         ),
-                        ImageHelper.loadFromAsset(AppAssets.search_icon),
+                        GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          MainSearchScreen()));
+                            },
+                            child: ImageHelper.loadFromAsset(
+                                AppAssets.search_icon)),
                       ],
                     )
                   ],
@@ -163,24 +174,34 @@ class _HomeMainScreenState extends State<HomeMainScreen> {
                         borderRadius: BorderRadius.circular(20),
                         color: AppColors.white),
                     child: Stack(alignment: Alignment.center, children: [
-                      const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 16),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
+                            const Text(
                               'Map',
                               style: TextStyle(
                                   fontSize: 12, fontWeight: FontWeight.w600),
                             ),
-                            Text(
+                            const Text(
                               '|',
                               style: TextStyle(
                                   color: AppColors.lightGray, fontSize: 17),
                             ),
-                            Text('Filter',
-                                style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.w600)),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const FilterScreen()));
+                              },
+                              child: const Text('Filter',
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w600)),
+                            ),
                           ],
                         ),
                       ),

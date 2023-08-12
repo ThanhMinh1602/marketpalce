@@ -22,4 +22,6 @@ class AppStyle {
       fontSize: 13, fontWeight: FontWeight.w400, color: AppColors.lightGray);
   static const TextStyle lightText_14_600 = TextStyle(
       fontSize: 14, fontWeight: FontWeight.w600, color: AppColors.primaryColor);
+  static const TextStyle lightText_14_400 = TextStyle(
+      fontSize: 14, fontWeight: FontWeight.w400, color: AppColors.lightGray);
 }

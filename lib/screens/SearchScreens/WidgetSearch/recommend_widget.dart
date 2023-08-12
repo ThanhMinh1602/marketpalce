@@ -45,23 +45,42 @@ class RecommendWidget extends StatelessWidget {
 }
 
 // Recommend item
-class RecommendItem extends StatelessWidget {
+class RecommendItem extends StatefulWidget {
   const RecommendItem({
     Key? key,
     required this.text,
   }) : super(key: key);
+
   final String text;
+
+  @override
+  _RecommendItemState createState() => _RecommendItemState();
+}
+
+class _RecommendItemState extends State<RecommendItem> {
+  bool isSelected = false;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          color: AppColors.lightBackground,
-          borderRadius: BorderRadius.circular(20)),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-        child: Text(
-          text,
-          style: AppStyle.lightText_13_500.copyWith(fontSize: 14),
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          isSelected = !isSelected; // Khi bấm, đảo ngược trạng thái chọn
+        });
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          color: isSelected ? Colors.blue : AppColors.lightBackground,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+          child: Text(
+            widget.text,
+            style: AppStyle.lightText_13_500.copyWith(
+              fontSize: 14,
+              color: isSelected ? Colors.white : AppColors.T_title_black,
+            ),
+          ),
         ),
       ),
     );

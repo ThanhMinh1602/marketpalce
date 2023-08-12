@@ -34,7 +34,7 @@ class _HomeMainScreenState extends State<HomeMainScreen> {
     return Scaffold(
       backgroundColor: AppColors.babyBlueEyes,
       appBar: AppBar(
-        toolbarHeight: 70,
+        toolbarHeight: 100,
         automaticallyImplyLeading: false,
         elevation: 0,
         backgroundColor: AppColors.primaryColor,

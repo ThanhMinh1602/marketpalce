@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:marketpalce/constants/app_color.dart';
 import 'package:marketpalce/constants/app_style.dart';
+import 'package:marketpalce/screens/SearchScreens/WidgetSearch/distance_slider.dart';
 import 'package:marketpalce/screens/SearchScreens/WidgetSearch/recommend_widget.dart';
 
-class FilterScreen extends StatelessWidget {
+class FilterScreen extends StatefulWidget {
   const FilterScreen({super.key});
 
+  @override
+  State<FilterScreen> createState() => _FilterScreenState();
+}
+
+class _FilterScreenState extends State<FilterScreen> {
   @override
   Widget build(BuildContext context) {
     List<String> listType = ['Delivery', 'Pick-up', 'Dine-in'];
@@ -20,6 +26,7 @@ class FilterScreen extends StatelessWidget {
     ];
     List<String> listPrice = ['Any', '\$', '\$\$', '\$\$\$', '\$\$\$\$'];
     List<String> listSort = ['Price', 'Rating', 'Distance'];
+    double _slidervalue = 0.0;
     return Scaffold(
       backgroundColor: AppColors.white,
       appBar: AppBar(
@@ -62,7 +69,7 @@ class FilterScreen extends StatelessWidget {
           const SizedBox(
             height: 32,
           ),
-          const RecommendWidget(text: 'Distance', children: []),
+          RecommendWidget(text: 'Distance', children: [SliderLabelWidget()]),
           const SizedBox(
             height: 32,
           ),

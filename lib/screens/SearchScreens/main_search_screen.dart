@@ -3,7 +3,6 @@ import 'package:marketpalce/constants/app_assets.dart';
 import 'package:marketpalce/constants/app_color.dart';
 import 'package:marketpalce/constants/app_style.dart';
 import 'package:marketpalce/helpers/image_helper.dart';
-import 'package:marketpalce/screens/SearchScreens/WidgetSearch/recommend_widget.dart';
 
 class MainSearchScreen extends StatefulWidget {
   MainSearchScreen({super.key});
@@ -25,7 +24,7 @@ class _MainSearchScreenState extends State<MainSearchScreen> {
     return Scaffold(
       backgroundColor: AppColors.white,
       appBar: AppBar(
-        toolbarHeight: 70,
+        toolbarHeight: 100,
         automaticallyImplyLeading: false,
         elevation: 0,
         backgroundColor: AppColors.primaryColor,
@@ -42,7 +41,7 @@ class _MainSearchScreenState extends State<MainSearchScreen> {
                   children: [
                     Expanded(
                       child: SizedBox(
-                        height: 36,
+                        height: 34,
                         child: TextFormField(
                           decoration: const InputDecoration(
                               hintText: 'Search',
@@ -137,10 +136,70 @@ class _MainSearchScreenState extends State<MainSearchScreen> {
             Container(
               margin: const EdgeInsets.symmetric(vertical: 16),
               height: 1, // Độ dày của đường kẻ
-              color: Color.fromARGB(44, 0, 0, 0),
+              color: const Color.fromARGB(44, 0, 0, 0),
             ),
             Column(
-              children: [],
+              children: [
+                Row(
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        width: 32,
+                        height: 32,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                                color: AppColors.lightGray, width: 1)),
+                        child: CircleAvatar(
+                          backgroundImage: NetworkImage(
+                              'https://cdn.pixabay.com/photo/2023/04/13/11/27/hedgehog-7922370_640.jpg'),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 6,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Baikohken',
+                                style: AppStyle.lightText_16_700.copyWith(
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Text(
+                              'Food Court near Gate 40-80, Departures Level (L6)',
+                              style: AppStyle.lightText_13_400
+                                  .copyWith(fontSize: 10)),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 20),
+                            child: Text(
+                              '20-30min',
+                              style: AppStyle.lightText_13_400.copyWith(
+                                  fontSize: 10, color: AppColors.T_title_black),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                )
+              ],
             )
           ],
         ),

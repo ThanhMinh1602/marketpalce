@@ -6,6 +6,7 @@ import 'package:marketpalce/screens/SearchScreens/main_search_screen.dart';
 import 'package:marketpalce/screens/SplashScreens/splash_screen.dart';
 import 'package:marketpalce/test.dart';
 
+
 void main() {
   runApp(const MyApp());
 }
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MainScreen(),
+      home: MainSearchScreen(),
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.blue,

@@ -32,4 +32,9 @@ class AppAssets {
   static const String icon_oickup_cart = 'assets/icons/icon_oickup_cart.png';
   static const String icon_delete_search =
       'assets/icons/icon_delete_search.png';
+  static const String icon_vip = 'assets/icons/icon-vip.png';
+  static const String icon_vip1 = 'assets/icons/icon-vip-1.png';
+  static const String icon_vip2 = 'assets/icons/icon-vip-2.png';
+  static const String icon_vip3 = 'assets/icons/icon-vip-3.png';
+  static const String icon_vip4 = 'assets/icons/icon-vip-4.png';
 }
